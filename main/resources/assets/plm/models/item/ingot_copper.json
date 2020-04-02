@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "plm:items/ingot_copper"
+        "layer0": "plm:item/ingot_copper"
     }
 }
