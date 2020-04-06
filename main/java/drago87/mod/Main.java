@@ -1,8 +1,10 @@
 package drago87.mod;
 
 import drago87.mod.proxy.CommonProxy;
+import drago87.mod.tabs.PoweredLampsTab;
 import drago87.mod.util.Reference;
-
+import drago87.mod.util.handelers.RegistryHandler;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -14,6 +16,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class Main
 {
+	public static final CreativeTabs POWEREDLAMPSTAB = new PoweredLampsTab("poweredlampstab");
 	@Instance
 	public static Main instance;
 	
@@ -21,7 +24,7 @@ public class Main
 	public static CommonProxy proxy;
 	
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) {}
+	public void preInit(FMLPreInitializationEvent event) {RegistryHandler.otherRegistries();}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {}

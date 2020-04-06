@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "poweredlamps:block/ore_overworld_copper"
+    }
+}

@@ -2,13 +2,15 @@ package drago87.mod.util.handelers;
 
 import drago87.mod.init.BlockInit;
 import drago87.mod.init.ItemInit;
-import drago87.mod.util.IHasModel;
+import drago87.mod.util.interfaces.IHasModel;
+import drago87.mod.world.gen.WorldGenCustomOres;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @EventBusSubscriber
 public class RegistryHandler 
@@ -43,5 +45,10 @@ public class RegistryHandler
 				((IHasModel)block).registerModels();
 			}
 		}
+	}
+	
+	public static void otherRegistries()
+	{
+		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);
 	}
 }

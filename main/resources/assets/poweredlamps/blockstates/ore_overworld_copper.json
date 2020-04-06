@@ -1,0 +1,6 @@
+{
+    "variants": 
+    {
+        "variant=copper": { "model": "poweredlamps:ore_overworld_copper" }
+    }
+}
